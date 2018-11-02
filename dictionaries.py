@@ -30,3 +30,28 @@ alien_0['points'] = 10
 for key, value in alien_0.items(): 
     print("\nkey: " + key)
     print("value: " + str(value))
+
+
+# Example program 
+aliens = [] # empty list
+
+# make 30 green ones
+for alien_number in range(0,30):
+    new_alien = {   'color' : 'green',
+                    'points': 5,
+                    'speed' : 'slow'
+                }
+    aliens.append(new_alien)
+
+# turn some into yellow
+for alien in aliens[0:3]:
+    if alien['color'] == 'green':
+        alien['color'] = 'yellow'
+        alien['points'] = 10
+        alien['speed'] = 'medium'
+
+# show first 5 aliens
+for alien in aliens[0:5]:
+    print(alien)
+print("...")
+
